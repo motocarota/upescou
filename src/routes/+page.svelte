@@ -9,6 +9,32 @@
   ];
 </script>
 
+<svelte:head>
+  <title>Trattoria U Pescou | Cucina tipica ligure a Lavagna</title>
+  <meta
+    name="description"
+    content="Trattoria U Pescou: cucina tipica genovese e pesce fresco nel centro di Lavagna, in Liguria. Scopri i nostri menu e vieni a trovarci."
+  />
+  <link rel="canonical" href="https://upescou.it/" />
+
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Trattoria U Pescou | Cucina tipica ligure a Lavagna" />
+  <meta
+    property="og:description"
+    content="Cucina tipica genovese e pesce fresco nel centro di Lavagna, in Liguria."
+  />
+  <meta property="og:image" content="https://upescou.it/img/1.webp" />
+  <meta property="og:url" content="https://upescou.it/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trattoria U Pescou | Cucina tipica ligure a Lavagna" />
+  <meta
+    name="twitter:description"
+    content="Cucina tipica genovese e pesce fresco nel centro di Lavagna, in Liguria."
+  />
+  <meta name="twitter:image" content="https://upescou.it/img/1.webp" />
+</svelte:head>
+
 <div class="hero min-h-screen" style="background-image: url(/img/1.webp);">
   <div class="hero-overlay"></div>
   <div class="hero-content text-neutral-content text-center">
@@ -35,7 +61,7 @@
       <figure>
         <img
           src="/img/{c.img}.webp"
-          alt="car!"
+          alt={c.title}
           class="sepia hover:sepia-0 ease-in duration-300"
         />
       </figure>
@@ -68,7 +94,7 @@
 >
   <img
     src="/img/21.webp"
-    alt="car!"
+    alt="Sala interna della Trattoria U Pescou a Lavagna"
     class="rounded-lg"
     style="border-radius: 16px;"
   />

@@ -7,7 +7,37 @@
 		{ label: "Servizi", url: "#servizi" },
 		{ label: "Contatti", url: "#contatti" },
 	];
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Restaurant",
+		name: "Trattoria U Pescou",
+		image: "https://upescou.it/img/1.webp",
+		url: "https://upescou.it/",
+		telephone: "+39 0185 392727",
+		servesCuisine: ["Ligure", "Pesce", "Pizza"],
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: "Via Dante Alighieri 70",
+			addressLocality: "Lavagna",
+			postalCode: "16033",
+			addressRegion: "GE",
+			addressCountry: "IT",
+		},
+		sameAs: [
+			"https://www.tripadvisor.it/Restaurant_Review-g194788-d2196211-Reviews-Trattoria_U_Pescou-Lavagna_Italian_Riviera_Liguria.html",
+			"https://www.instagram.com/daupescou/",
+		],
+	};
 </script>
+
+<svelte:head>
+	<meta name="keywords" content="trattoria, lavagna, pescou, pesce, cucina tipica, ligure, pizzeria" />
+	<meta property="og:site_name" content="Trattoria U Pescou" />
+	<meta property="og:locale" content="it_IT" />
+
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}<\/script>`}
+</svelte:head>
 
 <div>
 	<div class="navbar bg-base-100 drop-shadow-lg">

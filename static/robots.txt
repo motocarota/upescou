@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://upescou.it/sitemap.xml
